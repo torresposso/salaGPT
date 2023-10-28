@@ -10,6 +10,7 @@ export const handler: Handlers<any, State> = {
 
     const { origin } = new URL(req.url);
 
+    console.log("origin", origin);
     const { data, error } = await supabaseClient.auth.signInWithOAuth(
       {
         provider: "google",
